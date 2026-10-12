@@ -1,4 +1,4 @@
-# Loki ⚡
+# Loki 
 
 Loki is a standalone, high-performance privacy and identity rotation tool designed exclusively for Ubuntu and Debian-based Linux distributions. It allows tactical operators and privacy analysts to instantly obfuscate their local hardware presence and trigger complete network identity rotation after completing an operation—all without relying on external proxies, VPNs, or the Tor network.
 
@@ -13,7 +13,7 @@ When the `newid` command is executed, Loki safely isolates the system and perfor
 
 ---
 
-## 📋 Prerequisites
+##  Prerequisites
 
 Loki requires `macchanger` and the default Linux network management utilities to perform lower-layer network manipulation.
 
@@ -25,7 +25,7 @@ sudo apt update && sudo apt install macchanger isc-dhcp-client -y
 
 ---
 
-## 🚀 Execution & Usage
+##  Execution & Usage
 
 Because Loki directly manipulates hardware kernel links, network sockets, and system interface states, it **must** be executed with root administrative privileges.
 
@@ -40,13 +40,13 @@ Because Loki directly manipulates hardware kernel links, network sockets, and sy
 
 ---
 
-## ⚠️ Operational Notes
+##  Operational Notes
 
 * **Interface Filtering:** Loki automatically isolates and ignores loopback (`lo`), virtual bridges (`br-`, `virbr`), container endpoints (`docker`, `veth`), and hypervisor links (`vboxnet`), ensuring only your physical network hardware is mutated.
 * **Network Stability:** The identity rotation takes approximately 10-12 seconds to stabilize as the DHCP server assigns a new network lease.
 
 ---
 
-## ⚖️ License & Disclaimer
+##  License & Disclaimer
 
 This project is created for authorized penetration testing, security auditing, and forensic privacy research purposes only. The author (`4B2A`) holds no responsibility for unauthorized deployment or malicious abuse of this infrastructure utility.
